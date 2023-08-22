@@ -1,0 +1,32 @@
+times = 0
+quiz_score = []
+assignment_score = []
+seatwork_score = []
+
+while times < 5:
+    quiz = int((input("Enter your quiz score: ")))
+    quiz_score.append(quiz)
+    times += 1
+
+times = 0
+while times < 2:
+    assignment = int(input("Enter your assignment score: "))
+    assignment_score.append(assignment)
+    times += 1
+
+times = 0
+while times < 2:
+    seatwork = int(input("Enter your seatwork score: "))
+    seatwork_score.append(seatwork)
+    times += 1
+
+major_exam = int(input("Enter your major exam score: "))
+
+ave_quiz = sum(quiz_score) / 5
+
+ave_ass_sw = sum(assignment_score + seatwork_score ) / 4
+
+grade = (0.5 * major_exam) + (0.4 * ave_quiz) + (0.1 * ave_ass_sw)
+
+print()
+print(f"Your final grade is: {grade}")
